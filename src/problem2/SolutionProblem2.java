@@ -32,7 +32,7 @@ public class SolutionProblem2 {
 		
 		department[3]=sarita;
 		department[4]=rosita;
-		System.out.println(department[0].computeSalary());
+		 
 		
 		
 		

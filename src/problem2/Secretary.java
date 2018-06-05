@@ -24,7 +24,7 @@ public class Secretary extends DeptEmployee {
 	{
 		this.overtimeHours = overtimeHours;
 	}
-	
+	@Override
 	public double computeSalary()
 	{
 		return this.salary + 12*this.overtimeHours;
