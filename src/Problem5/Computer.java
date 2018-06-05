@@ -1,5 +1,7 @@
 package Problem5;
 
+import java.util.Objects;
+
 public class Computer {
 	String manufacturer;
 	String processor;
@@ -11,14 +13,14 @@ public class Computer {
 	
 	@Override
 	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((processor == null) ? 0 : processor.hashCode());
-		long temp;
-		temp = Double.doubleToLongBits(processorSpeed);
-		result = prime * result + (int) (temp ^ (temp >>> 32));
-		result = prime * result + ramSize;
-		return result;
+		
+		
+		int hash = 547;
+		hash = (int) (hash  + Double.doubleToLongBits(this.processorSpeed));
+		hash = (int) (hash  + Double.doubleToLongBits(this.ramSize));
+		
+		return hash;
+		
 	}
 
 
@@ -35,7 +37,7 @@ public class Computer {
 			return false;
 		}
 			
-		if (getClass() != obj.getClass())
+		if (this.getClass() != obj.getClass())
 		{
 			return false;
 		}
@@ -54,26 +56,20 @@ public class Computer {
 			}
 				
 		}
-		else if (!processor.equals(other.processor))
-		{
-			return false;
-		}
-		if (Double.doubleToLongBits(processorSpeed) != Double.doubleToLongBits(other.processorSpeed))
-		{
-			return false;
-		}
-		if (ramSize != other.ramSize)
-		{
-			return false;
-		}
-		return true;
+		
+		return processor.equals(other.processor) &&  this.processorSpeed == other.processorSpeed
+				&&  ramSize == other.ramSize;
+		
+		
+		
+		
 	}
 
 
 	@Override
 	public String toString() {
-		return "Current Status of Computer [manufacturer=" + manufacturer + ", processor=" + processor + ", ramSize=" + ramSize
-				+ ", processorSpeed=" + processorSpeed + "]";
+		return "Current Status of Computer <<<manufacturer=" + manufacturer + ", processor=" + processor + ", ramSize=" + ramSize
+				+ ", processorSpeed=" + processorSpeed + ">>";
 	}
 	
 	

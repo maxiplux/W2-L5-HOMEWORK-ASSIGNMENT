@@ -9,6 +9,7 @@ public class BasePlusCommissionEmployee  extends CommissionEmployee{
 			double commissionRate, double baseSalary) {
 		super(firtsName, lastName, socialSecurityNumber, grossSales, commissionRate);
 		this.baseSalary = baseSalary;
+		
 	}
 	
 

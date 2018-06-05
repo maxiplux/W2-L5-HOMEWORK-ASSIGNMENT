@@ -72,8 +72,8 @@ public class Computer {
 
 	@Override
 	public String toString() {
-		return "Current Status of Computer [manufacturer=" + manufacturer + ", processor=" + processor + ", ramSize=" + ramSize
-				+ ", processorSpeed=" + processorSpeed + "]";
+		return "Current Status of Computer --->manufacturer=" + manufacturer + ", processor=" + processor + ", ramSize=" + ramSize
+				+ ", processorSpeed=" + processorSpeed + "<----";
 	}
 	
 	

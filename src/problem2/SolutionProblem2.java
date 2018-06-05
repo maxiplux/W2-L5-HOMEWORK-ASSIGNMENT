@@ -55,7 +55,7 @@ public class SolutionProblem2 {
 				JOptionPane.showMessageDialog(null, "The result to all secreataries  " + String.valueOf(secretaries), "",1);			
 				break;
 			case "3":
-				JOptionPane.showMessageDialog(null, "The result to all profesors  " + String.valueOf(all), "",1);			
+				JOptionPane.showMessageDialog(null, "The result to all   " + String.valueOf(all), "",1);			
 				break;
 			default:
 				JOptionPane.showMessageDialog(null, "Exits without options " , "",1);

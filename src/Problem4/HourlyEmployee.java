@@ -9,8 +9,8 @@ public class HourlyEmployee extends Employee {
 	
 	@Override
 	public String toString() {
-		return "HourlyEmployee [wage=" + wage + ", hours=" + hours + ", firtsName=" + firtsName + ", lastName="
-				+ lastName + ", socialSecurityNumber=" + socialSecurityNumber + "]";
+		return "HourlyEmployee -->wage=" + wage + ", hours=" + hours + ", firtsName=" + firtsName + ", lastName="
+				+ lastName + ", socialSecurityNumber=" + socialSecurityNumber + "<----";
 	}
 
 

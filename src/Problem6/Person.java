@@ -9,17 +9,22 @@ class Person implements Cloneable {
 		this.computer = computer;
 	}
 	
-	  public Object clone()
+	  public Object clone()  
 	  {
-	        Object obj=null;
+		  
+		  
+		  
+	        
 	        try
 	        {
-	            obj=super.clone();
-	        }catch(CloneNotSupportedException ex)
+	        	Person  obj = (Person )super.clone();
+	        	return obj;
+	        }
+	        catch(CloneNotSupportedException ex)
 	        {
 	            System.out.println("Fail on cloning");
 	        }
-	        return obj;
+	        return null;
 	    }
 	
 	
