@@ -6,7 +6,7 @@ public class Vertical implements Figure {
 	public void getFigure() {
 		// TODO Auto-generated method stub
 		System.out.print("||");
-		
+
 	}
 
 }

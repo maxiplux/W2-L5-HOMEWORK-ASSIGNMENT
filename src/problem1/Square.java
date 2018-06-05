@@ -6,16 +6,16 @@ public class Square extends Rectengle {
 		super(side, side, color);
 		// TODO Auto-generated constructor stub
 	}
-	
+
 	@Override
-	double calcualteArea()  {
-		return this.width * this.height;	
+	double calcualteArea() {
+		return this.width * this.height;
 	}
+
 	@Override
 	double calculatePerimeter() {
-		return 4*this.width ;	
-		
-	} 
-	
+		return 4 * this.width;
+
+	}
 
 }

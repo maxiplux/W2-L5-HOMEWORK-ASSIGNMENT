@@ -1,15 +1,10 @@
 package problem2;
 
-public class Professor extends DeptEmployee  {
+public class Professor extends DeptEmployee {
 	int numberOfPublications;
-	
-	
-
-	 
 
 	public Professor(String name, int yearOfHire, int monthOfHire, int dayOfHire, double salary,
-			int numberOfPublications) 
-	{
+			int numberOfPublications) {
 		super(name, yearOfHire, monthOfHire, dayOfHire, salary);
 		this.numberOfPublications = numberOfPublications;
 	}

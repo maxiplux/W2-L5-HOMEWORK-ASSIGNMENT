@@ -1,13 +1,12 @@
 package Problem3;
 
-public class UpwardHat implements Figure{
-	
+public class UpwardHat implements Figure {
+
 	@Override
-	public void getFigure() 
-	{
+	public void getFigure() {
 		// TODO Auto-generated method stub
-		System.out.print("/\\");
-		
+		System.out.print("/\\ ");
+
 	}
 
 }

@@ -5,28 +5,16 @@ import java.util.Arrays;
 
 public class Solution4 {
 	public static void main(String[] args) {
-		
-		Employee eduardo = new CommissionEmployee("Juan ", "Francisco", "14623807",2500, 0.1);
-		//System.out.println(eduardo);		
-		Employee jhon = new HourlyEmployee("Juan", "Francisco", "31251721", 50000, 12);
-		//System.out.println(jhon);		
+
+		Employee eduardo = new CommissionEmployee("Juan ", "Francisco", "14623807", 2500, 0.1);
+		Employee jhon = new HourlyEmployee("Juan", "Francisco", "31251721", 50000, 12);	
 		Employee frank = new SalariedEmployee("Frank ", "Salazar", "38487", 3000);
-		//System.out.println(frank );		
-		Employee alejandra = new BasePlusCommissionEmployee("Alenadra", "Saavedra", "8489823", 8478398, 0.1, 95000);		
-		//System.out.println(alejandra );
-		
-		Employee[] database = {
-				eduardo,jhon,frank,alejandra
-		};
-		
-		double total_salary = Arrays.stream(database).mapToDouble(o->o.getPayment()).sum();
-		
+		Employee alejandra = new BasePlusCommissionEmployee("Alenadra", "Saavedra", "8489823", 8478398, 0.1, 95000);
+		Employee[] database = { eduardo, jhon, frank, alejandra };
+		double total_salary = Arrays.stream(database).mapToDouble(o -> o.getPayment()).sum();
 		NumberFormat formatter = NumberFormat.getCurrencyInstance();
 		String moneyString = formatter.format(total_salary);
-		
-		System.out.printf("The Total salary of database of employees is %s \n",moneyString);
-		
-		
-		
+		System.out.printf("The Total salary of database of employees is %s \n", moneyString);
+
 	}
 }

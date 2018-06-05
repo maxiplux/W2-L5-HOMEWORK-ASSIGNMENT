@@ -1,15 +1,8 @@
 package problem2;
 
 public class Secretary extends DeptEmployee {
-	
-	
-	
-	double overtimeHours;
-	 
-	
- 
 
-	
+	double overtimeHours;
 
 	public Secretary(String name, int yearOfHire, int monthOfHire, int dayOfHire, double salary) {
 		super(name, yearOfHire, monthOfHire, dayOfHire, salary);
@@ -20,16 +13,14 @@ public class Secretary extends DeptEmployee {
 		return overtimeHours;
 	}
 
-	public void setOvertimeHours(double overtimeHours) 
-	{
+	public void setOvertimeHours(double overtimeHours) {
 		this.overtimeHours = overtimeHours;
 	}
+
 	@Override
-	public double computeSalary()
-	{
-		return this.salary + 12*this.overtimeHours;
-		
+	public double computeSalary() {
+		return this.salary + 12 * this.overtimeHours;
+
 	}
-	
-	
+
 }

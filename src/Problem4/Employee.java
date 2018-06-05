@@ -1,11 +1,11 @@
 package Problem4;
 
-public abstract  class Employee {
+public abstract class Employee {
 	String firtsName;
 	String lastName;
 	String socialSecurityNumber;
-	
-	public abstract  double  getPayment() ;
+
+	public abstract double getPayment();
 
 	public Employee(String firtsName, String lastName, String socialSecurityNumber) {
 		super();
@@ -13,7 +13,5 @@ public abstract  class Employee {
 		this.lastName = lastName;
 		this.socialSecurityNumber = socialSecurityNumber;
 	}
-	
-	
 
 }

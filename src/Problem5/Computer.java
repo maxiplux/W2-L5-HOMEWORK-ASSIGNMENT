@@ -7,77 +7,61 @@ public class Computer {
 	String processor;
 	int ramSize;
 	double processorSpeed;
-	
-	
-	
-	
+
 	@Override
 	public int hashCode() {
-		
-		
-		int hash = 547;
-		hash = (int) (hash  + Double.doubleToLongBits(this.processorSpeed));
-		hash = (int) (hash  + Double.doubleToLongBits(this.ramSize));
-		
-		return hash;
-		
-	}
 
+		int hash = 547;
+		hash += Double.doubleToLongBits(this.processorSpeed);
+		hash += Double.doubleToLongBits(this.ramSize);
+
+		return hash;
+
+	}
 
 	@Override
-	public boolean equals(Object obj) 
-	{
-		if (this == obj)
-		{
+	public boolean equals(Object obj) {
+		if (this == obj) {
 			return true;
 		}
-			
-		if (obj == null)
-		{
+
+		if (obj == null) {
 			return false;
 		}
-			
-		if (this.getClass() != obj.getClass())
-		{
+
+		if (this.getClass() != obj.getClass()) {
 			return false;
 		}
-		
-		
+
 		Computer other = (Computer) obj;
-		
-		
-		if (processor == null) 
-		{
+
+		if (processor == null) {
 			if (other.processor != null)
-				
+
 			{
 				return false;
-				
-			}
-				
-		}
-		
-		return processor.equals(other.processor) &&  this.processorSpeed == other.processorSpeed
-				&&  ramSize == other.ramSize;
-		
-		
-		
-		
-	}
 
+			}
+
+		}
+
+		return processor.equals(other.processor) && this.processorSpeed == other.processorSpeed
+				&& ramSize == other.ramSize;
+
+	}
 
 	@Override
 	public String toString() {
-		return "Current Status of Computer <<<manufacturer=" + manufacturer + ", processor=" + processor + ", ramSize=" + ramSize
-				+ ", processorSpeed=" + processorSpeed + ">>";
+		return "Current Status of Computer <<<manufacturer=" + manufacturer + ", processor=" + processor + ", ramSize="
+				+ ramSize + ", processorSpeed=" + processorSpeed + ">>";
 	}
-	
-	
+
 	public double computePower() {
 		// return ramSize multiplied by processorSpeed
-		return this.ramSize* this.processorSpeed;
-		
+		return this.ramSize * this.processorSpeed;
+
 	}
+
 	public double getProcessorSpeed() {
 		return processorSpeed;
 	}
@@ -87,13 +71,11 @@ public class Computer {
 	}
 
 	public Computer(String manufacturer, String processor, int ramSize, double processorSpeed) {
-		
+
 		this.manufacturer = manufacturer;
 		this.processor = processor;
 		this.ramSize = ramSize;
 		this.processorSpeed = processorSpeed;
 	}
-	
-	
 
 }
